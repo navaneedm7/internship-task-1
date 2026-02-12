@@ -1,0 +1,79 @@
+             Task 1: Local Network TCP Port Scan
+
+ Objective
+
+The objective of this task was to discover open TCP ports on devices in the local network to understand network exposure and identify potentially vulnerable services.
+
+---
+
+Tools Used
+
+- Nmap
+
+---
+
+Network Information
+- Network Range: `192.168.40.0/24`
+- Subnet Mask: `255.255.255.0`
+- Usable Hosts: `192.168.40.1 – 192.168.40.254`
+
+---
+
+Scan Command Used
+
+ nmap -p 1-655335 -T4 -A -v 192.168.40.1
+
+---
+
+
+Scan Result 
+
+Discovered open port 135/tcp on 192.168.40.1
+Discovered open port 445/tcp on 192.168.40.1
+Discovered open port 139/tcp on 192.168.40.1
+Discovered open port 49664/tcp on 192.168.40.1
+Discovered open port 912/tcp on 192.168.40.1
+Discovered open port 49665/tcp on 192.168.40.1
+Discovered open port 902/tcp on 192.168.40.1
+Discovered open port 49669/tcp on 192.168.40.1
+Discovered open port 49680/tcp on 192.168.40.1
+Discovered open port 49670/tcp on 192.168.40.1
+Discovered open port 49668/tcp on 192.168.40.1
+
+
+---
+
+
+Common Services Identified
+
+SSH (22) – Remote access
+
+HTTP (80) – Web service
+
+HTTPS (443) – Secure web service
+
+SMB (445) – File sharing
+
+
+---
+
+Recommendations
+
+Close unused ports
+
+Enforce strong passwords
+
+Use firewalls
+
+Use HTTPS instead of HTTP
+
+Keep systems updated
+
+
+---
+
+
+
+Conclusion
+
+This scan provided hands-on experience with TCP port scanning and demonstrated how open services can increase network exposure.
